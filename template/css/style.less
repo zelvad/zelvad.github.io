@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic');
+body{
+	margin: 0;
+	padding: 0;
+	background: #14171A;
+	font-family: 'Roboto', sans-serif;
+	color: #fff;
+}
+a{
+	color: #fff;
+}
+a:hover{
+	color: #fff;
+	text-decoration: none;
+}
+input{
+	color: #fff;
+}
+input:-internal-autofill-selected{
+	background: #000;
+}
+.decor{
+	background: url('/template/img/decor.png');
+	padding: 20px 0 20px 0;
+}
+.no-pd{
+	padding-right: 0;
+	padding-left: 0;
+}
+.no-mr{
+	margin-right: 0;
+	margin-left: 0;
+}
+.dot{
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+.dot-red{
+	background: #FF0000;
+	box-shadow: 0px 0px 25px #FF0000;
+}
+.dot-green{
+	background: #27E546;
+	box-shadow: 0px 0px 25px #27E546;
+}
+.button-n{
+    width: 150px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	text-transform: uppercase;
+	display: inline-block;
+	cursor: pointer;
+	font-size: 14px;
+	position: relative;
+	overflow: hidden;
+	&:before, &:after{
+		content: '';
+		width: 150px;
+		height: 0;
+		display: block;
+		position: absolute;
+	    transition: height .2s ease-in;
+	}
+	&:before{
+		bottom: 0;
+	}
+	&:after{
+		top: 0;
+	}
+	&:hover{
+		&:before, &:after{
+			height: 25px;
+		}
+	}
+	span{
+		position: absolute;
+		z-index: 1;
+		width: 150px;
+		left: 0;
+	}
+}
+.button-n-green{
+	&:before, &:after{
+		background: #44AA3F;
+	}
+	background: #3DCE3F;
+	border-bottom: 4px solid #44AA3F;
+}
+.button-n-red{
+	&:before, &:after{
+		background: #DD3636;
+	}
+	background: #FF1010;
+	border-bottom: 4px solid #DD3636;
+}
+.nav{
+	width: 100%;
+	margin-top: 55px;
+	align-items: center;
+	width: 1340px;
+	height: 80px;
+	.logo{
+		img{
+			/* float: right; */
+		}
+	}
+	.logo-text{
+		text-transform: uppercase;
+		line-height: 1.4em;
+		span{
+			font-size: 20px;
+			&:nth-child(1){
+				font-weight: 900;
+				display: block;
+			}
+			&:nth-child(2){
+				font-weight: 900;
+				display: block;
+				color: #888888;
+			}
+		}
+	}
+	ul{
+		list-style-type: none;
+		font-weight: 300;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		li{
+			display: inline;
+			margin-left: 15px;
+			&:nth-child(1){
+				margin-left: 0;
+			}
+		}
+	}
+	.search{
+		input{
+			float: right;
+			background: #0F1012;
+			border: none;
+			outline: none;
+			width: 100%;
+			height: 45px;
+			padding: 0 50px 0 20px;
+			font-weight: 400;
+		}
+		label{
+			position: absolute;
+			right: 30px;
+			top: 12px;
+			cursor: pointer;
+		}
+	}
+}
+.news{
+	width: 100%;
+	background: #0F1012;
+	display: flex;
+	padding-right: 20px;
+	margin-top: 35px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+	&:nth-child(1){
+		margin-top: 60px;
+	}
+	.img{
+		width: 340px;
+		/* height: 240px; */
+		img{
+			width: 340px;
+			height: 100%;
+		}
+	}
+	.info{
+		padding: 7px 0 15px 20px;
+		.title{
+			font-weight: bold;
+			font-size: 25px;
+			color: #FE9E27;
+		}
+		.info-news{
+			display: flex;
+			align-items: center;
+			height: 25px;
+			font-size: 14px;
+			font-weight: 300;
+			.svg{
+				display: inline-block;
+			}
+			.category{
+				span{
+					margin-left: -5px;
+				}
+			}
+			.date{
+				margin-right: 10px;
+			}
+			.eye{
+				margin-left: 20px;
+				span{
+					margin-left: 5px;
+				}
+			}
+		}
+		.text{
+			margin-top: 15px;
+		    font-size: 14px;
+		    line-height: 16px;
+		}
+		.buttons{
+			margin-top: 10px;
+			.button{
+			    width: 165px;
+				height: 44px;
+				background: #13181C;
+				text-align: center;
+				line-height: 44px;
+				cursor: pointer;
+				display: inline-block;
+				&:nth-child(2){
+					margin-left: 15px;
+				}
+				span{
+					font-weight: 700;
+					text-transform: uppercase;
+					margin-left: 5px;
+				    font-size: 12px;
+				}
+				.icon{
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+.nav-right{
+	.status-bar{
+		width: 100%;
+		height: 50px;
+		display: flex;
+		align-items: center;
+		.dot{
+			margin-left: 30px;
+		}
+		.text{
+			display: inline-block;
+			margin-left: 30px;
+			span{
+				display: block;
+				&:nth-child(1){
+					font-weight: 700;
+					line-height: 16px;
+					text-transform: uppercase;
+				}
+				&:nth-child(2){
+					font-weight: 300;
+					font-size: 12px;
+					line-height: 14px;
+				}
+			}
+		}
+	}
+	.account{
+		width: 100%;
+		height: 110px;
+		background: #0F1012;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	    margin-top: 10px;
+	    .buttons{
+	    	a:nth-child(2){
+	    		margin-left: 10px;
+	    	}
+	    }
+		.info{
+		    display: flex;
+			.avatar{
+			    display: inline-block;
+				img{
+					width: 50px;
+				}
+			}
+			.nav-account{
+				display: inline-block;
+				margin-left: 15px;
+				.item{
+					.icon{
+						display: inline-block;
+						img{
+							width: 15px;
+							height: 15px;
+						}
+					}
+					span{
+						font-weight: 300;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	.auth-style{
+		display: block;
+		.info{
+			display: flex;
+			width: 100%;
+			height: 110px;
+			align-items: center;
+			justify-content: space-between;
+			padding-left: 20px;
+			.account-info{
+				display: flex;
+			}
+		}
+		.loguot{
+			padding-right: 20px;
+		}
+	}
+	.block{
+	    margin-top: 20px;
+		.title{
+			margin-top: 30px;
+			span{
+				font-weight: 700;
+				font-size: 22px;
+				text-transform: uppercase;
+				font-size: 18px;
+			}
+			.line{
+				height: 4px;
+				background: linear-gradient(to right, #FF8A00, #DA1B60);
+			}
+			.one{
+				width: 102px;
+			}
+			.two{
+				width: 61px;
+			}
+			.th{
+			    width: 87px;
+			}
+		}
+	}
+	.burger{
+		list-style-type: none;
+		padding: 0;
+		margin: 20px 0;
+		li{
+			a{
+				width: 100%;
+				background: #0F1012;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+				cursor: pointer;
+				margin-top: 8px;
+				overflow: hidden;
+				display: block;
+				transition: background 0.2s ease-in;
+				/* .dot:active{
+					.burger-submenu{
+						max-height: 0;
+					}
+				} */
+			}
+			.item__href:before{
+				content: '';
+				width: 13px;
+				height: 13px;
+				background: #1D2124;
+				border-radius: 50%;
+				position: relative;
+				display: block;
+				float: right;
+				top: 25px;
+				right: 20px;
+			}
+			&:nth-child(1){
+				margin-top: 0;
+			}
+			.burger-submenu{
+				overflow: hidden;
+				max-height: 0;
+				transition: max-height 0.5s ease-in;
+				a{
+					display: flex;
+					width: 100%;
+					height: 60px;
+					background: #1D2124;
+					box-sizing: border-box;
+					line-height: 60px;
+					padding: 0 20px 0 20px;
+					justify-content: space-between;
+					box-shadow: none;
+					margin-top: 0;
+					span{
+						text-transform: uppercase;
+						&:nth-child(1){
+							font-size: 15px;
+							font-weight: 500;
+						}
+						&:nth-child(2){
+							font-size: 14px;
+							font-weight: 300;
+						}
+					}
+					&:hover{
+						background: #0F1012;
+					}
+				}
+				/* (r1) Изменить после компиляции в CSS */
+				&:target{
+					max-height: 100rem;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+	.bl{
+		width: 100%;
+		height: auto;
+		padding: 20px;
+		background: #0F1012;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.8);
+		margin-top: 20px;
+		text-transform: uppercase;
+	}
+	.pull{
+		.block__pull{
+			.title{
+				font-weight: 500;
+				font-size: 13px;
+				margin: 0 0 20px 0;
+			}
+			.info{
+				display: flex;
+				align-items: center;
+				.svg{
+					display: inline-block;
+					.scale{
+						img{
+							transform: scale(-1, 1)
+						}
+					}
+				}
+				.buttons{
+					display: inline-block;
+					.btn{
+						width: 160px;
+						height: 50px;
+						background: linear-gradient(to right, #FF8A00, #DA1B60) no-repeat;
+						text-align: center;
+						line-height: 50px;
+						font-weight: 500;
+						color: #fff;
+						display: block;
+						border-radius: 0;
+						cursor: pointer;
+						font-size: 14px;
+						padding: 0;
+						transition: background 0.5s ease-in;
+						background-size: 101%;
+						&:hover{
+							background: linear-gradient(to right, #DA1B60, #FF8A00) no-repeat;
+						}
+						&:nth-child(2){
+							margin-top: 10px;
+						}
+					}
+				}
+				.text{
+					font-size: 12px;
+					font-weight: 200;
+					margin-bottom: 5px;
+					margin: -20px 0 10px 0;
+				    line-height: 15px;
+				}
+			}
+		}
+	}
+	/* Contact admin (потом сделать по надобности) */
+	/* .contact-admin{
+		text-transform: uppercase;
+		.block-ca{
+			margin-top: 20px;
+		}
+	} */
+}
+footer{
+	margin-top: 20px;
+	width: 100%;
+	height: 165px;
+	background: #0F1012;
+	display: flex;
+	align-items: center;
+}
+/* FF8A00
+DA1B60 */
